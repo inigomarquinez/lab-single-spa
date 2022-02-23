@@ -2,6 +2,14 @@
 
 Playground to test microfrontends built using [single-spa](https://single-spa.js.org/).
 
+## How to run it locally
+
+First, install the dependencies for all the projects by going into `root` folder and running `npm run install-all`.
+
+Then, to run all projects at once, from the `root` folder run `npm run start-all`.
+
+Now, if we check http://localhost:9000 we will see `navbar` page being served from localhost:9001, `app1` page being served from localhost:9002 and `app2` page being served from localhost:9003. `navbar` is always served, whereas `app1` and `app2` are being conditionally rendered as we switch in our root project.
+
 ## Useful links
 
 - [microfrontends by Martin Fowler](https://martinfowler.com/articles/micro-frontends.html)
