@@ -4,7 +4,9 @@ Playground to test microfrontends built using [single-spa](https://single-spa.js
 
 ## How to run it locally
 
-First, install the dependencies for all the projects by going into `root` folder and running `npm run install-all`.
+First, install the dependencies for the `root` project by going into `root` folder and running `npm install`.
+
+After that, install the dependencies of all the other projects by going into `root` folder and running `npm run install-all`.
 
 Then, to run all projects at once, from the `root` folder run `npm run start-all`.
 
@@ -20,3 +22,5 @@ Now, if we check http://localhost:9000 we will see `navbar` page being served fr
 - [Migrating CRA to Micro Frontends with Single SPA](https://ogzhanolguncu.com/blog/migrating-cra-to-micro-frontends-with-single-spa)
 - [React Typescript Microfrontend Monorepo with single-spa + Lerna](https://dev.to/kevbeltrao/react-typescript-microfrontend-monorepo-with-single-spa-lerna-m60)
 - [Microfrontends with Module Federation: What, Why, and How](https://levelup.gitconnected.com/microfrontends-with-module-federation-what-why-and-how-845f06020ee1)
+- [Micro-frontend Architectures on AWS](https://aws.amazon.com/es/blogs/architecture/micro-frontend-architectures-on-aws/)
+- [How to Develop and Deploy Micro-Frontends with Single-SPA](https://www.freecodecamp.org/news/developing-and-deploying-micro-frontends-with-single-spa/)
