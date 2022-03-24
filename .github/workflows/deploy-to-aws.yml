@@ -1,0 +1,69 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # build:
+  #   timeout-minutes: 10
+  #   env:
+  #     CI: true
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@master
+
+  #   - uses: actions/setup-node@v2
+  #     with:
+  #       node-version: '16'
+  #       cache: 'npm'
+
+  #   - name: Install
+  #     run: |
+  #       npm install
+
+  deploy:
+    # needs: build
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      # - name: Check Tag
+      #   id: check-tag
+      #   run: |
+      #     if [[ ${{ github.ref }} =~ ^refs/tags/[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+      #         echo ::set-output name=match::true
+      #     fi
+      - name: Configure AWS credentials
+        # if: steps.check-tag.outputs.match == 'true'
+        uses: aws-actions/configure-aws-credentials@master
+        with:
+          aws-access-key-id: ${{ secrets.AWS_KEY_ID_PROD }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+          aws-region: eu-west-3
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Install
+        run: |
+          npm install
+
+      - name: Install packages
+        run: |
+          npm run install:all
+
+      - name: Build packages
+        run: |
+          npm run build:all
+
+      - name: Upload build folder to S3
+        # if: steps.check-tag.outputs.match == 'true'
+        run: |
+          aws s3 sync ./build s3://lab-single-spa
