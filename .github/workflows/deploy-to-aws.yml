@@ -71,4 +71,4 @@ jobs:
       - name: Upload build folder to S3
         # if: steps.check-tag.outputs.match == 'true'
         run: |
-          aws s3 sync ./root/dist s3://lab-single-spa/root-config
+          aws s3 sync ./packages/root/dist s3://lab-single-spa/root-config
