@@ -2,8 +2,7 @@ name: Deploy to AWS
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   # build:
@@ -26,8 +25,9 @@ jobs:
 
   deploy:
     # needs: build
-    timeout-minutes: 10
+    # timeout-minutes: 10
     runs-on: ubuntu-latest
+
     steps:
       # - name: Check Tag
       #   id: check-tag
