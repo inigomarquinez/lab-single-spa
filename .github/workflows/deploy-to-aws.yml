@@ -72,3 +72,7 @@ jobs:
         # if: steps.check-tag.outputs.match == 'true'
         run: |
           aws s3 sync ./packages/root/dist s3://lab-single-spa/root-config
+          aws s3 sync ./packages/app1/dist s3://lab-single-spa/app1
+          aws s3 sync ./packages/app2/dist s3://lab-single-spa/app2
+          aws s3 sync ./packages/navbar/dist s3://lab-single-spa/navbar
+          aws s3 sync ./packages/navbar/dist/index.html s3://lab-single-spa/index.html
