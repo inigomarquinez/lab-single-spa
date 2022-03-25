@@ -24,3 +24,4 @@ Now, if we check http://localhost:9000 we will see `navbar` page being served fr
 - [Microfrontends with Module Federation: What, Why, and How](https://levelup.gitconnected.com/microfrontends-with-module-federation-what-why-and-how-845f06020ee1)
 - [Micro-frontend Architectures on AWS](https://aws.amazon.com/es/blogs/architecture/micro-frontend-architectures-on-aws/)
 - [How to Develop and Deploy Micro-Frontends with Single-SPA](https://www.freecodecamp.org/news/developing-and-deploying-micro-frontends-with-single-spa/)
+- [Developing and Deploying Micro-Frontends With Single-Spa](https://medium.com/swlh/developing-and-deploying-micro-frontends-with-single-spa-c8b49f2a1b1d)

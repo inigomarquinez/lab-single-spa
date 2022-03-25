@@ -1,15 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Link } from "react-router-dom";
+
+import "./root.component.css";
 
 const Navbar = () => {
   return (
-    <div>
-      <h1>Navbar</h1>
-      <div>
-        <a href="/app1">GLUE</a>
-        <br />
-        <a href="/app2">IESE</a>
-      </div>
-    </div>
+    <BrowserRouter>
+      <nav className="nav">
+        <Link to="/app1" className="link">
+          GLUE
+        </Link>
+        <Link to="/app2" className="link">
+          IESE
+        </Link>
+      </nav>
+    </BrowserRouter>
   );
 }
 

@@ -71,6 +71,7 @@ jobs:
       - name: Upload build folder to S3
         # if: steps.check-tag.outputs.match == 'true'
         run: |
+          aws s3 cp ./packages/importmap.json s3://lab-single-spa/importmap.json
           aws s3 cp ./packages/root/dist/index.html s3://lab-single-spa/index.html
           aws s3 sync ./packages/root/dist s3://lab-single-spa/root
           aws s3 sync ./packages/app1/dist s3://lab-single-spa/app1

@@ -5,6 +5,7 @@
   },
   "scripts": {
     "install:all": "node_modules/.bin/lerna exec -- npm install",
-    "build:all": "node_modules/.bin/lerna run build:webpack"
+    "build:all": "node_modules/.bin/lerna run build:webpack",
+    "start": "node_modules/.bin/lerna run start"
   }
 }
