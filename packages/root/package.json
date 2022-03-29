@@ -8,19 +8,7 @@
     "check-format": "prettier --check .",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
-    "build:types": "tsc",
-    "navbar": "cd .. && cd navbar && npm start -- --port 9001",
-    "app1": "cd .. && cd app1 && npm start -- --port 9002",
-    "app2": "cd .. && cd app2 && npm start -- --port 9003",
-    "navbar-build": "cd .. && cd navbar && npm run build",
-    "app1-build": "cd .. && cd app1 && npm run build",
-    "app2-build": "cd .. && cd app2 && npm run build",
-    "navbar-install": "cd .. && cd navbar && npm install",
-    "app1-install": "cd .. && cd app1 && npm install",
-    "app2-install": "cd .. && cd app2 && npm install",
-    "start-all": "./node_modules/.bin/npm-run-all --parallel start navbar app1 app2",
-    "build-all": "./node_modules/.bin/npm-run-all --parallel navbar-build app1-build app2-build",
-    "install-all": "./node_modules/.bin/npm-run-all --parallel navbar-install app1-install app2-install"
+    "build:types": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
